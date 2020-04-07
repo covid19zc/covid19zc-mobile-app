@@ -3,13 +3,22 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+
+  hexColor (String colorhexcode) {
+    String colornew = '0xff' + colorhexcode;
+    colornew = colornew.replaceAll('#', '');
+    int colorint = int.parse(colornew);
+    return colorint;
+  }
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.red,
-        primaryColor: Colors.red[300],
+        primaryColor: Color(hexColor('#FF5A6F')),
         accentColor: Colors.red[200],
         fontFamily: 'Inter'
       ),
