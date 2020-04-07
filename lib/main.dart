@@ -1,15 +1,9 @@
 import 'package:flutter/material.dart';
+import 'assets/hex.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-
-  hexColor (String colorhexcode) {
-    String colornew = '0xff' + colorhexcode;
-    colornew = colornew.replaceAll('#', '');
-    int colorint = int.parse(colornew);
-    return colorint;
-  }
 
   // This widget is the root of your application.
   @override
