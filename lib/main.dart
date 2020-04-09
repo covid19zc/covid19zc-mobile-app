@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'assets/hex.dart';
-import 'pages/BottomNav.dart';
+import 'pages/BottomNavigation.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,9 +15,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.red,
         primaryColor: Color(hexColor('#FF5A6F')),
         accentColor: Colors.red[200],
-        fontFamily: 'Inter'
+        fontFamily: 'Inter',
       ),
-      home: BottomNav(),
+      home: BottomNavigation(),
     );
   }
 }

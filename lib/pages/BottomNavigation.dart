@@ -5,12 +5,12 @@ import 'Stat.dart';
 import 'Symptoms.dart';
 import 'Contact.dart';
 
-class BottomNav extends StatefulWidget {
+class BottomNavigation extends StatefulWidget {
   @override
-  _BottomNavState createState() => _BottomNavState();
+  _BottomNavigationState createState() => _BottomNavigationState();
 }
 
-class _BottomNavState extends State<BottomNav> {
+class _BottomNavigationState extends State<BottomNavigation> {
 
   int _currentIndex = 2;
   final List<Widget> tabs = [
@@ -21,7 +21,7 @@ class _BottomNavState extends State<BottomNav> {
     Contact(),
   ];
   final PageStorageBucket bucket = PageStorageBucket();
-  Widget currentScreen = Cases();
+  Widget currentScreen = Home();
 
   @override
   Widget build(BuildContext context) {
