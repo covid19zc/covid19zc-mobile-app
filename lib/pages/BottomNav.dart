@@ -12,11 +12,11 @@ class BottomNav extends StatefulWidget {
 
 class _BottomNavState extends State<BottomNav> {
 
-  int _currentIndex = 0;
+  int _currentIndex = 2;
   final List<Widget> tabs = [
-    Home(),
     Cases(),
     Stat(),
+    Home(),
     Symptoms(),
     Contact(),
   ];
@@ -34,16 +34,16 @@ class _BottomNavState extends State<BottomNav> {
         iconSize: 30,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            title: Text('Home'),
-          ),
-          BottomNavigationBarItem(
             icon: Icon(Icons.info),
             title: Text('Cases'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.multiline_chart),
             title: Text('Stats'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            title: Text('Home'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.format_quote),
