@@ -19,18 +19,9 @@ class _CasesState extends State<Cases> {
           children: <Widget>[
             Text(
               'Cases',
-              style: TextStyle(
-                  color: Colors.red[300],
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20.0,),
-                  textAlign: TextAlign.center,
             ),
             Text(
               'Coming soon...',
-              style: TextStyle(
-                  color: Colors.red[300],
-                  fontSize: 19.0,
-                  fontStyle: FontStyle.italic),
             ),
           ],
         ),

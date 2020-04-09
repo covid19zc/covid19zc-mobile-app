@@ -16,6 +16,14 @@ class MyApp extends StatelessWidget {
         primaryColor: Color(hexColor('#FF5A6F')),
         accentColor: Colors.red[200],
         fontFamily: 'Inter',
+        textTheme: TextTheme(
+        body1: TextStyle(
+          fontSize: 20.0, 
+          fontFamily: 'Inter', 
+          fontWeight: FontWeight.bold, 
+          color: Colors.red[300],
+          ),
+        ),
       ),
       home: BottomNavigation(),
     );
