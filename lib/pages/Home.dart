@@ -13,6 +13,7 @@ class _HomeState extends State<Home> {
     double height = MediaQuery.of(context).size.height;
 
     return Scaffold(
+      backgroundColor: Theme.of(context).accentColor,
       appBar: AppBar(
         title: Text('COVID-19 Tracker: Zamboanga City'),
         centerTitle: true,
@@ -41,11 +42,11 @@ class _HomeState extends State<Home> {
                   : i == 1 ? '93'
                   : '2381',
                   style: TextStyle(
-                    color: Colors.white
+                    color: Color(0xff44337a),
                   ),
                 ),
                 radius: 30,
-                backgroundColor: Theme.of(context).primaryColor,
+                backgroundColor: Theme.of(context).accentColor
               ),
               Container(
                 width: width - 100,
@@ -55,7 +56,7 @@ class _HomeState extends State<Home> {
                     : i == 1 ? 'PUI' 
                     : 'PUM',
                     style: TextStyle(
-                      color: Theme.of(context).primaryColor,
+                      color: Color(0xffff5a6f),
                       fontSize: 22
                     ),
                   ),
