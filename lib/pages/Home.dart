@@ -75,19 +75,6 @@ class _HomeState extends State<Home> {
         ),
       ));
     }
-
-    homeChildren.add(
-      Text(
-        'Tracking current statistics of confirmed COVID-19 cases and history in Zamboanga City',
-        textAlign: TextAlign.center,
-      ),
-    );
-    homeChildren.add(
-      Text(
-        'Coming soon...',
-      ),
-    );
-
     return homeChildren;
   }
 }
