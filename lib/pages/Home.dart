@@ -18,10 +18,14 @@ class _HomeState extends State<Home> {
         title: Text('COVID-19 Tracker: Zamboanga City'),
         centerTitle: true,
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: homeChildren(width, height)
+      
+      body: Padding(
+        padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: homeChildren(width, height)
+          ),
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
@@ -32,7 +36,7 @@ class _HomeState extends State<Home> {
     for (var i = 0; i < 3; i++) {
       homeChildren.add( Card(
         elevation: 5.0,
-        margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
+        margin: EdgeInsets.fromLTRB(10, 0, 10, 10),
         child: Padding(
           padding: const EdgeInsets.all(15.0),
           child: Row(
