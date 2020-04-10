@@ -32,6 +32,7 @@ class _HomeState extends State<Home> {
     for (var i = 0; i < 3; i++) {
       homeChildren.add( Card(
         elevation: 5.0,
+        margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
         child: Padding(
           padding: const EdgeInsets.all(15.0),
           child: Row(
@@ -49,7 +50,7 @@ class _HomeState extends State<Home> {
                 backgroundColor: Theme.of(context).accentColor
               ),
               Container(
-                width: width - 100,
+                width: width - 120,
                 child: ListTile(
                   title: Text(
                     i == 0 ? 'Cases Confirmed' 
