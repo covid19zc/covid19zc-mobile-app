@@ -46,7 +46,7 @@ class _ContactState extends State<Contact> {
                               fontSize: 22
                             ),
                           ),
-                          subtitle: Text( 'Contact details from Beng Climaco Facebook Page.',
+                          subtitle: Text( 'Contact details from Beng Climaco and DOH RO IX Facebook page.',
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.normal
