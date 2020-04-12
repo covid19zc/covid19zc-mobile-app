@@ -46,7 +46,7 @@ class _ContactState extends State<Contact> {
                               fontSize: 22
                             ),
                           ),
-                          subtitle: Text( 'Contact details from Beng Climaco and DOH RO IX Facebook page.',
+                          subtitle: Text( 'Contact details sourced from Beng Climaco, Zamboanga City Medical Center, and DOH RO IX Facebook pages.',
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.normal
@@ -74,7 +74,7 @@ class _ContactState extends State<Contact> {
   List<Widget> cardOfContacts() {
     List<Widget> cardOfContacts = List<Widget>();
 
-    for (var i = 0; i < 3; i++) {
+    for (var cardOfContactsCounter = 0; cardOfContactsCounter < 3; cardOfContactsCounter++) {
       cardOfContacts.add( Card(
         elevation: 5.0,
         margin: EdgeInsets.fromLTRB(10, 0, 10, 10),
@@ -84,13 +84,13 @@ class _ContactState extends State<Contact> {
           ),
           child: ExpansionTile(
             title: Text(
-              i == 0 ? 'Zamboanga Task Force COVID-19' : i == 1 ? 'Zamboanga City Medical Center Teleconsultation' : 'Relief Operations',
+              cardOfContactsCounter == 0 ? 'Zamboanga Task Force COVID-19' : cardOfContactsCounter == 1 ? 'Zamboanga City Medical Center Teleconsultation' : 'Relief Operations',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Color(0xffff5a6f),
               ),
             ),
-            children: i == 0 ? expansion0() : i == 1 ? expansion1() : expansion2()
+            children: cardOfContactsCounter == 0 ? expansionZamboangaTaskForce() : cardOfContactsCounter == 1 ? expansionZCMCTeleconsultation() : expansionReliefOperations()
           ),
         ),
       ));
@@ -100,45 +100,45 @@ class _ContactState extends State<Contact> {
   }
 
   //Zamboanga Task Force COVID-19
-  List<Widget> expansion0() {
-    List<Widget> expansion0 = List<Widget>();
-    List<Widget> r0col0 = List<Widget>();
-    List<Widget> r1col0 = List<Widget>();
-    List<Widget> r2col0 = List<Widget>();
-    List<Widget> r0col1 = List<Widget>();
-    List<Widget> r1col1 = List<Widget>();
+  List<Widget> expansionZamboangaTaskForce() {
+    List<Widget> expansionZamboangaTaskForce = List<Widget>();
+    List<Widget> globeHotline = List<Widget>();
+    List<Widget> policeOperation = List<Widget>();
+    List<Widget> zcdrrmoHotline = List<Widget>();
+    List<Widget> smartHotline = List<Widget>();
+    List<Widget> healthLine = List<Widget>();
 
-    r0col0.add( Text('Globe Hotlines',
+    globeHotline.add( Text('Globe Hotlines',
       style: TextStyle(
         color: Color(0xff44337a),
       ),
     ));
-    r1col0.add( Text('Police Operations',
+    policeOperation.add( Text('Police Operations',
       style: TextStyle(
         color: Color(0xff44337a),
       ),
     ));
-    r2col0.add( Text('ZCDRRMO',
+    zcdrrmoHotline.add( Text('ZCDRRMO',
       style: TextStyle(
         color: Color(0xff44337a),
       ),
     ));
-    r0col1.add( Text('Smart Hotlines',
+    smartHotline.add( Text('Smart Hotlines',
       style: TextStyle(
         color: Color(0xff44337a),
       ),
     ));
-    r1col1.add( Text('Health Lines',
+    healthLine.add( Text('Health Lines',
       style: TextStyle(
         color: Color(0xff44337a),
       ),
     ));
 
-    for (var x = 0; x < 3; x++) {
+    for (var expansionZamboangaTaskForceCounter = 0; expansionZamboangaTaskForceCounter < 3; expansionZamboangaTaskForceCounter++) {
       //This loop will add all contacts to your first column in each row
-      for (var i = 0; i < (x == 0 ? (globeHotlines.length + 2) : x == 1 ? (policeOperations.length + 2) : (zcdrrmo.length + 2)); i++) {
-        (x ==  0 ? r0col0 : x == 1 ? r1col0 : r2col0).add( i == 0 || i == ((x == 0 ? globeHotlines.length : x == 1 ? policeOperations.length : zcdrrmo.length) + 1) ? Text('') : 
-          Text( (x == 0 ? globeHotlines[i - 1] : x == 1 ? policeOperations[i - 1] : zcdrrmo[i - 1]),
+      for (var number = 0; number < (expansionZamboangaTaskForceCounter == 0 ? (globeHotlines.length + 2) : expansionZamboangaTaskForceCounter == 1 ? (policeOperations.length + 2) : (zcdrrmo.length + 2)); number++) {
+        (expansionZamboangaTaskForceCounter ==  0 ? globeHotline : expansionZamboangaTaskForceCounter == 1 ? policeOperation : zcdrrmoHotline).add( number == 0 || number == ((expansionZamboangaTaskForceCounter == 0 ? globeHotlines.length : expansionZamboangaTaskForceCounter == 1 ? policeOperations.length : zcdrrmo.length) + 1) ? Text('') : 
+          Text( (expansionZamboangaTaskForceCounter == 0 ? globeHotlines[number - 1] : expansionZamboangaTaskForceCounter == 1 ? policeOperations[number - 1] : zcdrrmo[number - 1]),
           style: TextStyle(
             color: Color(0xff44337a),
             fontWeight: FontWeight.normal
@@ -146,9 +146,9 @@ class _ContactState extends State<Contact> {
         ));
       }
       //This loop will add all contacts to your second column in each row
-      for (var i = 0; i < ( x == 0 ? (smartHotlines.length + 2) : x == 1 ? (healthLines.length + 2) : 0); i++) {
-        (x ==  0 ? r0col1 : r1col1).add( i == 0 || i == ((x == 0 ? smartHotlines.length : healthLines.length) + 1) ? Text('') : 
-          Text( (x == 0 ? smartHotlines[i - 1] : healthLines[i - 1]),
+      for (var number = 0; number < ( expansionZamboangaTaskForceCounter == 0 ? (smartHotlines.length + 2) : expansionZamboangaTaskForceCounter == 1 ? (healthLines.length + 2) : 0); number++) {
+        (expansionZamboangaTaskForceCounter ==  0 ? smartHotline : healthLine).add( number == 0 || number == ((expansionZamboangaTaskForceCounter == 0 ? smartHotlines.length : healthLines.length) + 1) ? Text('') : 
+          Text( (expansionZamboangaTaskForceCounter == 0 ? smartHotlines[number - 1] : healthLines[number - 1]),
           style: TextStyle(
             color: Color(0xff44337a),
             fontWeight: FontWeight.normal
@@ -156,20 +156,20 @@ class _ContactState extends State<Contact> {
         ));
       }
 
-      expansion0.add( Row(
+      expansionZamboangaTaskForce.add( Row(
         children: <Widget>[
           Expanded(
             child: Container(
               child: Column(
-                children: (x ==  0 ? r0col0 : x == 1 ? r1col0 : r2col0)
+                children: (expansionZamboangaTaskForceCounter ==  0 ? globeHotline : expansionZamboangaTaskForceCounter == 1 ? policeOperation : zcdrrmoHotline)
               ),
             ),
           ),
-          Expanded(
+          expansionZamboangaTaskForceCounter == 2 ? Container() : Expanded(
             child: Container(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: (x ==  0 ? r0col1 : x == 1 ? r1col1 : <Widget>[]),
+                children: (expansionZamboangaTaskForceCounter ==  0 ? smartHotline : expansionZamboangaTaskForceCounter == 1 ? healthLine : <Widget>[]),
               ),
             ),
           ),
@@ -177,22 +177,22 @@ class _ContactState extends State<Contact> {
       ));
     }
 
-    return expansion0;
+    return expansionZamboangaTaskForce;
   }
   //Zamboanga City Medical Center Teleconsultation
-  List<Widget> expansion1() {
-    List<Widget> expansion1 = List<Widget>();
+  List<Widget> expansionZCMCTeleconsultation() {
+    List<Widget> expansionZCMCTeleconsultation = List<Widget>();
 
-    for (var x = 0; x < 2; x++) {
-      expansion1.add( Column(
+    for (var expansionZCMCTeleconsultationCounter = 0; expansionZCMCTeleconsultationCounter < 2; expansionZCMCTeleconsultationCounter++) {
+      expansionZCMCTeleconsultation.add( Column(
         children: <Widget>[
           Text(
-            x == 0 ? '8:00AM to 12:00NN (Monday to Saturday)' : '12:00NN to 4:00PM (Monday to Friday)',
+            expansionZCMCTeleconsultationCounter == 0 ? '8:00AM to 12:00NN (Monday to Saturday)' : '12:00NN to 4:00PM (Monday to Friday)',
             style: TextStyle(
               color: Color(0xff44337a),
             ),
           ),
-          x == 0 ? Container() : Text(
+          expansionZCMCTeleconsultationCounter == 0 ? Container() : Text(
             '8:00AM to 12:00NN (Sunday)',
             style: TextStyle(
               color: Color(0xff44337a),
@@ -214,10 +214,10 @@ class _ContactState extends State<Contact> {
                     crossAxisCount: 2,
                     childAspectRatio: 10,
                   ),
-                  itemCount: x == 0 ? zcmcSmart0.length : zcmcSmart1.length,
+                  itemCount: expansionZCMCTeleconsultationCounter == 0 ? zcmcSmart0.length : zcmcSmart1.length,
                   itemBuilder: (context, position){
                     return Center(
-                      child: Text( x == 0 ? zcmcSmart0[position] : zcmcSmart1[position],
+                      child: Text( expansionZCMCTeleconsultationCounter == 0 ? zcmcSmart0[position] : zcmcSmart1[position],
                         style: TextStyle(
                           color: Color(0xff44337a),
                           fontWeight: FontWeight.normal
@@ -245,10 +245,10 @@ class _ContactState extends State<Contact> {
                     crossAxisCount: 2,
                     childAspectRatio: 10,
                   ),
-                  itemCount: x == 0 ? zcmcGlobe0.length : zcmcGlobe1.length,
+                  itemCount: expansionZCMCTeleconsultationCounter == 0 ? zcmcGlobe0.length : zcmcGlobe1.length,
                   itemBuilder: (context, position){
                     return Center(
-                      child: Text( x == 0 ?  zcmcGlobe0[position] : zcmcGlobe1[position],
+                      child: Text( expansionZCMCTeleconsultationCounter == 0 ?  zcmcGlobe0[position] : zcmcGlobe1[position],
                         style: TextStyle(
                           color: Color(0xff44337a),
                           fontWeight: FontWeight.normal
@@ -264,15 +264,15 @@ class _ContactState extends State<Contact> {
         ],
       ));
     }
-    return expansion1;
+    return expansionZCMCTeleconsultation;
   }
   //Relief Operations
-  List<Widget> expansion2() {
-    List<Widget> expansion2 = List<Widget>();
+  List<Widget> expansionReliefOperations() {
+    List<Widget> expansionReliefOperations = List<Widget>();
     List<Widget> colChildren = List<Widget>();
-    for (var i = 0; i < (reliefOperations.length + 1); i++) {
+    for (var expansionReliefOperationsCounter = 0; expansionReliefOperationsCounter < (reliefOperations.length + 1); expansionReliefOperationsCounter++) {
       colChildren.add(
-        Text( i != (reliefOperations.length) ? reliefOperations[i] : '',
+        Text( expansionReliefOperationsCounter != (reliefOperations.length) ? reliefOperations[expansionReliefOperationsCounter] : '',
           style: TextStyle(
             color: Color(0xff44337a),
             fontWeight: FontWeight.normal
@@ -280,9 +280,9 @@ class _ContactState extends State<Contact> {
         )
       );
     }
-    expansion2.add( Column(
+    expansionReliefOperations.add( Column(
       children: colChildren
     ));
-    return expansion2;
+    return expansionReliefOperations;
   }
 }
